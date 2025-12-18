@@ -1,86 +1,117 @@
-# Flutter on Codespaces
+🐾 PetosApp
+![Build Status](https://github.com/YOUR_USERNAME/petosapp/actions/workflows/flutter_build.yml/badge.svg)
 
-This is a template repository for developing with [Flutter](https://flutter.dev/) on the web on [GitHub Codespaces](https://github.com/features/codespaces).
+An intelligent pet health companion for symptom triage, smart logs, and AI-driven vet insights.
 
-Flutter is a cross-platform UI framework by Google for building apps. Codespaces is a cloud-based development environment that lets you run a full-featured IDE in the cloud. This template repository lets you get started with Flutter on Codespaces in just a few clicks.
 
-**Table of Contents**
-- [Important things to note](#important-things-to-note)
-- [Setup](#setup)
-  - [Getting started](#getting-started)
-  - [Using a sample](#using-a-sample)
-- [Development Environment](#development-environment)
-  - [Developing in the browser](#developing-in-the-browser)
-  - [Developing in the desktop app](#developing-in-the-desktop-app)
-- [Flutter Development](#flutter-development)
-  - [Developing for mobile](#developing-for-mobile)
-- [Codespaces Usage](#codespaces-usage)
-  - [Managing your codespace](#managing-your-codespace)
 
-This repository is generated from the [dilanx/flutter-codespaces](https://github.com/dilanx/flutter-codespaces) repository.
+🚀 Overview
 
-## Important things to note
+PetosApp helps pet owners make better health decisions through:
 
-Codespaces is not completely free. Free users have 120 core-hours per month and Pro users have 180 core-hours per month. The default codespace runs on a 2-core machine, so that's 60 hours (or 90 hours) of free usage per month before getting charged. Make sure to stop your codespace when you're not using it (it automatically stops after 30 minutes of inactivity by default). See more pricing details [here](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces), and manage your active codespaces [here](https://github.com/codespaces).
+🧠 AI-Powered Symptom Triage — instantly analyze symptoms before vet visits
 
-## Setup
+📋 Smart Logs — record and track pet health and habits effortlessly
 
-### Getting started
+🐕 Chronic Companion — monitor long-term conditions with insights and reminders
 
-1. Press "Use this template" towards the top right of this repository and create a new repository from this template.
+💳 PayPal Premium Features — unlock advanced analytics and personalized vet reports
 
-    > There's also an option to open this repository in Codespaces and publish it to GitHub later from there, but I recommend creating your own repository first.
+☁️ Firebase Integration — secure authentication, data sync, and notifications
 
-2. In your new repository, press "Code", select "Codespaces", then press "Create codespace on main". A container with everything you need to get started will be created automatically, then you'll be taken to your new codespace (VS Code in your browser). If you'd prefer to work on your codespace using the VS Code desktop app instead of the browser app, you can follow these instructions.
+🧱 Project Structure
 
-3. Press the "Extensions" icon in the left sidebar. You'll see that the Flutter and Dart extensions are already being installed. The environment won't work properly until the installation is complete, so wait for it to finish.
+petosapp/
+├─ lib/
+│ ├─ main.dart
+│ ├─ features/
+│ │ ├─ symptom_triage/
+│ │ ├─ smart_logs/
+│ │ ├─ chronic_companion/
+│ │ └─ pre_vet_reports/
+│ ├─ core/
+│ │ ├─ auth/
+│ │ ├─ ai_integration/
+│ │ └─ paypal_integration/
+│ ├─ env/
+│ └─ firebase/
+├─ test/
+│ ├─ unit/
+│ └─ widget/
+├─ android/
+├─ ios/
+├─ scripts/
+├─ functions/
+├─ pubspec.yaml
+└─ README.md
 
-4. In your integrated terminal (the TERMINAL tab), run `flutter pub get` to install the missing Flutter dependencies.
+⚙️ Installation & Build
 
-5. In the ports view (the PORTS tab), port 3000 should be listed there already. Right click on it, and, under "Port Visibility", select "Public". This is important so the app can access services on your client from other server ports without getting blocked due to CORS.
+Clone this repository
+git clone https://github.com/neolexus/petosapp.git
 
-6. Run `./run.sh` in the terminal to start the app. A notification will appear saying that an app opened on port 3000. You can press "Open in Browser" to open it, but it won't load until the terminal shows that it's ready. You can refresh once the app is loaded (as indicated by a prompt to press "R" to reload).
+cd petosapp
 
-    > You can find the link to access the app in your browser at any time by going to the ports view, right clicking on port 3000, and pressing "Open in Browser".
+Install dependencies
+flutter pub get
 
-7. That's it! Make changes in `lib/main.dart`, press "R" in the terminal, then refresh the page to see your changes appear quickly.
+Configure environment
+Create a file named .env inside /env/:
+API_KEY=your_api_key_here
+PAYPAL_CLIENT_ID=your_paypal_client_id_here
+FIREBASE_PROJECT_ID=your_project_id
 
-### Using a sample
+Run the app
+flutter run
 
-There are a collection of sample Flutter apps you can use. They're stored in the `samples` directory. If you want to use one of them, find the folder of the sample you want to use, then move the contents of the folder into the root of your repository. At minimum, this should overwrite `pubspec.yaml` and `lib`.
+Build APK manually
+flutter build apk --release
 
-## Development Environment
+Or let GitHub Actions build it automatically via flutter_build.yml.
 
-### Developing in the browser
+🧠 Tech Stack
+Layer	Technology
+Frontend	Flutter + Dart
+Backend	Firebase (Auth, Firestore, Storage)
+Payments	PayPal SDK
+AI	DeepSeek / OpenAI API
+CI/CD	GitHub Actions
+🧪 Testing
 
-The browser-based VS Code is the default editor for Codespaces, and has most of the features you'd need. Opening your codespace from [github.com/codespaces](https://github.com/codespaces) will automatically open the browser-based editor.
+Run unit and widget tests:
+flutter test
 
-### Developing in the desktop app
+Integration scripts are under /scripts/.
 
-If you'd prefer to use the desktop app version of VS Code, you can follow these instructions:
+📸 Screenshots
 
-1. Download the [VS Code desktop app](https://code.visualstudio.com/). You probably already have it if you chose to follow these instructions.
+(Add screenshots or preview GIFs here)
+Example:
 
-2. Install the [GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces).
 
-3. Open the command pallette from the View menu (or cmd+shift+P / ctrl+shift+P) and run "Codespaces: Connect to Codespace...".
+💡 Roadmap
 
-    > Alternatively, click the button in the very bottom left of VS Code (it says "Open a Remote Window" if you hover over it) and press "Connect to Codespace...".
+ Add voice-based symptom reporting
 
-4. Log in if necessary, then select your codespace from the list.
+ Introduce AI-powered pet diet planner
 
-## Flutter Development
+ Enable vet teleconsultation via video
 
-### Developing for mobile
+ Publish to Google Play and App Store
 
-Running Flutter in Codespaces makes it a bit difficult to run the app in a mobile simulator. However, developing for the web is basically the same as developing for mobile. I'd recommend opening your browser's developer tools and selecting a mobile device to emulate.
+🤝 Contributing
 
-If you're using Chrome or another Chromium-based browser, you can open DevTools like [this](https://developer.chrome.com/docs/devtools/open/) and emulate a device like [this](https://developer.chrome.com/docs/devtools/device-mode/). It'll be pretty similar for other browsers like Safari and Firefox.
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to change.
 
-## Codespaces Usage
+📜 License
 
-### Managing your codespace
+This project is licensed under the MIT License.
 
-When you're not using your codespace, deactivate it by going to [Codespaces](https://github.com/codespaces), pressing the 3 dots on the right side of the codespace, and pressing "Stop codespace". You can also deactivate it within the codespace by pressing "Codespaces" at the bottom left of VS Code and selecting "Stop Current Codespace".
+🌍 Links
 
-Edited files in your workspace are not deleted when stopping the codespace and the container won't need to be rebuilt when you start it again. Provided that you're under the storage limit (15 GB for Free users and 20 GB for Pro), you won't be charged if your codespace is offline. I recommend committing your repository changes on your codespace often to avoid losing work if you were to delete your codespace.
+🔗 Website: coming soon
+
+📧 Support: georgec.ignite@gmail.com
+
+🧠 Built with love by: George Chapungu
