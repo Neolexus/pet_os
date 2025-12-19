@@ -1,6 +1,6 @@
-name: petosapp
+name: pet_os
 description: Intelligent pet symptom triage and health companion app with AI, PayPal integration, and smart logs.
-publish_to: 'none'  # remove if you plan to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -28,10 +28,10 @@ dependencies:
   # --- API & Network ---
   http: ^1.2.1
   dio: ^5.5.0
-  flutter_dotenv: ^5.1.0   # for .env support
+  flutter_dotenv: ^5.1.0
 
   # --- Payments ---
-  paypal_sdk: ^1.0.0  # example, adjust to your SDK or wrapper
+  paypal_sdk: ^1.0.0
 
   # --- Local Storage ---
   shared_preferences: ^2.3.1
@@ -41,8 +41,6 @@ dependencies:
   # --- AI / ML Integrations ---
   google_mlkit_text_recognition: ^0.13.0
   tflite_flutter: ^0.10.2
-  # (Optional) If connecting to DeepSeek or OpenAI APIs:
-  dependencies:
   dart_openai: ^5.1.0
 
   # --- Utilities ---
