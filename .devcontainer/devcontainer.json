@@ -1,9 +1,7 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Flutter Android",
+  "image": "ghcr.io/codespaces-contrib/flutter-android:latest",
   "forwardPorts": [3000],
-  "name": "Flutter",
   "customizations": {
     "vscode": {
       "extensions": [
